@@ -2,7 +2,6 @@ from sympy import diff, simplify, expand, Q, ask, solve
 from sympy import latex, symbols, exp, cos, sin, re, atan, pi
 from sympy import Function, Symbol
 from sympy.parsing.latex import parse_latex
-from sympy.solvers.inequalities import solve_univariate_inequality
 from sympy.matrices import Matrix
 
 import matplotlib.pyplot as plt

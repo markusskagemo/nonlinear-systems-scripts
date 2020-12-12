@@ -9,6 +9,7 @@ u, z, x_1, x_2, z = symbols('u z x_1 x_2, z', real=True)
 k_1, k_2 = symbols('k_1 k_2', positive=True, real=True)
 f, g, h, V_1, V_2, phi = symbols('f g h V_1 V_2 phi')
 
+
 if __name__ == '__main__':
     # Specify system and LF
     x_1dot = exp(x_1) - x_1**3 - 1 + x_2
@@ -53,7 +54,9 @@ if __name__ == '__main__':
     plt_texts.append('$V_2 = %s$' % latex(simplify(V_2)))
     plt_texts.append('$V_2 = %s$' % latex(simplify(V_2).subs(z, x_2 - phi)))
     plt_texts.append('$\dot{V}_2 = %s$' % latex(simplify(V_2dot)))
-
+    print(plt_texts)
+    
+    # Render LaTeX
     ax = plt.axes([0, 0, 0.1, 0.1])
     ax.set_xticks([])
     ax.set_yticks([])
